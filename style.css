@@ -1,0 +1,59 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#6ee7b7;
+  --muted:#94a3b8;
+  --glass: rgba(255,255,255,0.03);
+  --radius:12px;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#071029 0%, #071022 100%);
+  color:#e6eef6;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+}
+
+.container{
+  width:100%;
+  max-width:980px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:20px;
+  border-radius:16px;
+  box-shadow:0 6px 30px rgba(2,6,23,0.6);
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+header h1{margin:4px 0 0;font-size:20px}
+.subtitle{margin:4px 0 12px;color:var(--muted);font-size:13px}
+
+.controls{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.selects{display:flex;gap:12px}
+.selects label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}
+.selects select{padding:8px;border-radius:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:inherit}
+
+.mic-row{display:flex;gap:8px;align-items:center}
+
+.panes{display:flex;gap:14px;margin-top:18px}
+.pane{flex:1;background:rgba(255,255,255,0.02);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+.pane h3{margin:0 0 8px;font-size:14px}
+textarea{
+  width:100%;min-height:180px;padding:10px;border-radius:10px;background:#0008;border:1px solid rgba(255,255,255,0.03);color:inherit;resize:vertical;font-size:14px;
+}
+
+.pane-actions{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.btn{background:transparent;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);cursor:pointer;color:inherit}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#022}
+.btn.secondary{opacity:0.9}
+
+footer{margin-top:14px;color:var(--muted);font-size:12px;text-align:center}
+@media(max-width:760px){
+  .panes{flex-direction:column}
+  .controls{flex-direction:column;align-items:flex-start;gap:10px}
+}
